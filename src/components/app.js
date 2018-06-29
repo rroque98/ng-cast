@@ -4,6 +4,10 @@ angular.module('video-player')
   // TODO
     controller: function() {
       this.videos = window.exampleVideoData;
+
+      this.onClick = () => {
+        console.log('clicked');
+      };
     },
     templateUrl: 'src/templates/app.html' 
   });
