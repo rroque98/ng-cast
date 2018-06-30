@@ -12,16 +12,17 @@ angular.module('video-player')
       };
 
       this.searchResults = (input) => {
-        console.log('video search results!');
-        //youTube.getVideosData(params);
         this.results = youTube.search(input, this.handleHTTPData.bind(this));
-        // console.log(this.results);
       };
+      
 
       this.handleHTTPData = (data) => {
         this.videos = data;
         this.currentVideo = this.videos[0];
       };
+    
+      //initialize from youTube
+      this.searchResults('doggies');
     },
     templateUrl: 'src/templates/app.html' 
   });
