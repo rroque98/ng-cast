@@ -6,11 +6,11 @@ angular.module('video-player')
       this.videos = window.exampleVideoData;
       this.video = this.videos[0];
 
-      this.onClick = () => {
-        console.log('clicked');
-      };
-      this.selectVideo = () => {
-        console.log('video selected!');
+      // this.onClick = (cb) => {
+      //   console.log('clicked');
+      // };
+      this.selectVideo = (video) => {
+        this.video = video;
       };
       this.searchResults = () => {
         console.log('video search results!');
