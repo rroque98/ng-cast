@@ -4,7 +4,7 @@ angular.module('video-player')
   // TODO
     controller: function() {
       this.videos = window.exampleVideoData;
-      this.video = this.videos[0];
+      this.currentVideo = this.videos[0];
 
       // this.onClick = (cb) => {
       //   console.log('clicked');
