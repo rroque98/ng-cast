@@ -1,18 +1,16 @@
 angular.module('video-player')
   .service('youTube', function($http) {
 
-    this.search = function(callback) {
+    this.search = function(input, callback) {
       return $http({
         method: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         params: {
-          q: 'bunnies',
+          q: input,
           maxResults: 5,
           part: 'snippet',
           key: window.YOUTUBE_API_KEY
         }
-        
-        
       }).then(function successCallback(response) {
         console.log('Data Fetched!');
         callback(response.data.items);

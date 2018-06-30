@@ -1,7 +1,8 @@
 angular.module('video-player')
   .component('search', {
     bindings: {
-      onSearch: '<'
+      result: '<'
     },
+
     templateUrl: 'src/templates/search.html' 
   });

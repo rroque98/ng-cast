@@ -6,19 +6,18 @@ angular.module('video-player')
       this.videos = window.exampleVideoData;
       this.currentVideo = this.videos[0];
 
-      // this.onClick = (cb) => {
-      //   console.log('clicked');
-      // };
       this.selectVideo = (video) => {
         console.log('title click');
-        this.video = video;
+        this.currentVideo = video;
       };
-      this.searchResults = () => {
+
+      this.searchResults = (input) => {
         console.log('video search results!');
         //youTube.getVideosData(params);
-        this.results = youTube.search(this.handleHTTPData.bind(this));
+        this.results = youTube.search(input, this.handleHTTPData.bind(this));
         // console.log(this.results);
       };
+
       this.handleHTTPData = (data) => {
         this.videos = data;
         this.currentVideo = this.videos[0];
